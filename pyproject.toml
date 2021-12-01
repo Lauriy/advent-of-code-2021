@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "advent-of-code-2021"
+version = "0.1.0"
+description = ""
+authors = ["Lauri Elias <lauri.elias@flowit.ee>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+pre-commit = "^2.16.0"
+pytest-cov = "^3.0.0"
+flake8 = "^4.0.1"
+mypy = "^0.910"
+isort = "^5.10.1"
+black = {version = "^21.11b1", allow-prereleases = true}
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 79
+
+[tool.black]
+line-length = 79
+target-version = ['py310']
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | foo.py           # also separately exclude a file named foo.py in
+                     # the root of the project
+)
+'''
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
