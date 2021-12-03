@@ -17,15 +17,15 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install
-      - name: Install pre-commit
-        run: |
-          pre-commit install
-      - name: Lint
-        run: |
-          pre-commit run --all-files
+#      - name: Install pre-commit
+#        run: |
+#          pre-commit install
+#      - name: Lint
+#        run: |
+#          pre-commit run --all-files
       - name: Generate coverage report
         run: |
-          pytest --cov=advent_of_code_2021 --cov-report=xml
+          poetry run pytest --cov=advent_of_code_2021 --cov-report=xml
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
