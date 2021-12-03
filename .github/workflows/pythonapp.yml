@@ -18,12 +18,12 @@ jobs:
         run: |
           poetry env use python
           poetry install
-      - name: Install pre-commit
-        run: |
-          pre-commit install
-      - name: Lint
-        run: |
-          pre-commit run --all-files
+#      - name: Install pre-commit
+#        run: |
+#          pre-commit install
+#      - name: Lint
+#        run: |
+#          pre-commit run --all-files
       - name: Generate coverage report
         run: |
           pytest --cov=advent_of_code_2021 --cov-report=xml
