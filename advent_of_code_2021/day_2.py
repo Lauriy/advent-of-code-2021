@@ -23,7 +23,7 @@ def solve_second(file_name: str) -> int:
     with open(
         f"{os.path.dirname(os.path.realpath(__file__))}/{file_name}", "r"
     ) as f:
-        data = f.readlines()
+        data = [x.strip() for x in f.readlines()]
     position = [0, 0, 0]
 
     for command in data:
