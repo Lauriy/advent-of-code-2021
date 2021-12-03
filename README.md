@@ -1,3 +1,6 @@
+![Python application](https://github.com/Lauriy/advent-of-code-2021/workflows/Python%20application/badge.svg)
+[![codecov](https://codecov.io/gh/Lauriy/advent-of-code-2021/branch/master/graph/badge.svg)](https://codecov.io/gh/Lauriy/advent-of-code-2021)
+
 # AoC 2021
 
 ```shell
