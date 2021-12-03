@@ -18,6 +18,8 @@ jobs:
         run: |
           poetry env use python
           poetry install
+      - name: Install pre-commit
+        run: |
           pre-commit install
       - name: Lint
         run: |
