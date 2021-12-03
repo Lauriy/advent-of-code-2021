@@ -7,7 +7,7 @@
 poetry env use python
 poetry install
 pre-commit install
-pytest
+pytest -s
 pre-commit run --all-files
 ```
 
