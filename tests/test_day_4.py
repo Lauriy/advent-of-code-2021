@@ -2,7 +2,11 @@ from typing import List
 
 import pytest
 
-from advent_of_code_2021.day_4 import check_if_board_won, solve_first
+from advent_of_code_2021.day_4 import (
+    check_if_board_won,
+    solve_first,
+    solve_second,
+)
 
 
 @pytest.mark.parametrize(
@@ -144,3 +148,15 @@ def test_solve_first():
 
     print(answer)
     assert answer == 65325
+
+
+def test_solve_second():
+    answer = solve_second("day_4_sample.txt")
+
+    print(answer)
+    assert answer == 1924
+
+    answer = solve_second("day_4_my_input.txt")
+
+    print(answer)
+    assert answer == 4624

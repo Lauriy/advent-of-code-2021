@@ -75,3 +75,34 @@ def solve_first(file_name: str) -> int:
             break
 
     return int(number_to_win_it) * unmarked_sum
+
+
+def solve_second(file_name: str) -> int:
+    with open(
+        f"{os.path.dirname(os.path.realpath(__file__))}/{file_name}", "r"
+    ) as f:
+        data = [x.strip() for x in f.readlines()]
+    is_first = True
+    boards = []
+    i = -1
+    picks = []
+    for line in data:
+        if is_first:
+            picks = line.split(",")
+            is_first = False
+            continue
+        if not line:
+            boards.append([])
+            i += 1
+            continue
+        boards[i].append([[x, False] for x in line.split()])
+    boards_won_so_far = 0
+    initial_board_count = len(boards)
+    for pick in picks:
+        boards = mark_boards(boards, pick)
+        for board in boards:
+            if check_if_board_won(board):
+                boards_won_so_far += 1
+                if boards_won_so_far == initial_board_count:
+                    return int(pick) * board_unmarked_sum(board)
+                boards.remove(board)
