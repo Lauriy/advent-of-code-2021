@@ -19,7 +19,7 @@ def test_solve_second():
     print(answer)
     assert answer == 61229
 
-    # answer = solve_first("day_8_my_input.txt")
-    #
-    # print(answer)
-    # assert answer == 440
+    answer = solve_second("day_8_my_input.txt")
+
+    print(answer)
+    assert answer == 1046281
