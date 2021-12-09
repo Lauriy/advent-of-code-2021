@@ -19,7 +19,7 @@ def test_solve_second():
     print(answer)
     assert answer == 1134
 
-    # answer = solve_second("day_9_my_input.txt")
-    #
-    # print(answer)
-    # assert answer == 448
+    answer = solve_second("day_9_my_input.txt")
+
+    print(answer)
+    assert answer == 1417248
