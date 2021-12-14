@@ -7,7 +7,7 @@ def lahenda_esimene_osa(failinimi: str, mitu_korda_asendada: int = 10) -> int:
         f"{os.path.dirname(os.path.realpath(__file__))}/{failinimi}", "r"
     ) as f:
         polymer, _, *asendused = f.read().split("\n")
-    asendused = dict(asendus.split(" -> ") for asendus in asendused)
+    asendused = dict(asendus.split(" -> ") for asendus in asendused if asendus)
 
     k6rvuti_t2htede_loendur = Counter(
         esimene + teine for esimene, teine in zip(polymer, polymer[1:])
