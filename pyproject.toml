@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "advent-of-code-2021"
-version = "0.5.0"
+version = "0.14.0"
 description = "https://mitelman.engineering/blog/automating-python-best-practices-for-a-new-project/"
 authors = ["Lauri Elias <lauri.elias@flowit.ee>"]
 
