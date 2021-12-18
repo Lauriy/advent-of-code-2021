@@ -16,7 +16,7 @@ repos:
       - id: black
 # mypy cannot handle 3.10 pattern matching : (
 #-   repo: https://github.com/pre-commit/mirrors-mypy
-#    rev: master
+#    rev: v0.920
 #    hooks:
 #        - id: mypy
 #          additional_dependencies: [pydantic]
